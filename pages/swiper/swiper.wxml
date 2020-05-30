@@ -1,0 +1,23 @@
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+	<view class="modals-cancel" bindtap="hideModal">
+		<!-- swiper -->
+		<view class="swiper_box">
+			<view class="page-section page-section-spacing swiper">
+				<swiper class="swiper" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-dots="{{indicatordots}}"
+				indicator-color="{{indicatorcolor}}"	indicator-active-color="{{indicatoractivecolor}}"
+				>
+					<block wx:for="{{background}}" wx:key="*this">
+						<swiper-item>
+							<view class="swiper-item {{item}}">
+								<image src="{{item}}" class="swiper_img"></image>
+							</view>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+
+		<!-- sweiper -->
+		<view class="guanbi" bindtap="hideModal">X</view>
+	</view>
+</view>
